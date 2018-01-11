@@ -1,0 +1,237 @@
+﻿<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+@model List<String>
+<br /><br />
+<div class="row">
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+      <div class="form-horizontal col-md-6">
+
+          @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+          <div class="form-group">
+              <label for="Number" class="control-label col-md-5">Enter a number to memorize</label>
+              <div class="col-md-6">
+                  <input type="text" name="Number" id="Number" class="form-control" />
+                  <!--data-val="true" data-val-number="A whole number must be entered." required
+            data-val-regex="Zipcode must be numeric and the correct length" data-val-regex-pattern="^\d+$" -->
+
+                  <span class="field-validation-valid text-danger" data-valmsg-for="Number" data-valmsg-replace="true"></span>
+                  <!-- <input class="form-control text-box single-line" data-val="true" data-val-number="The field Zip Code must be a number."
+            data-val-regex="Zipcode must be numeric and the correct length" data-val-regex-pattern="^\d{5}([\-]\d{4})?$"
+            data-val-required="The Zip Code field is required." id="CliZip" name="CliZip" type="number" value="">-->
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="MinimumWordCount" class="control-label col-md-5">Minimum size of each word</label>
+              <div class="col-md-4">
+                  @Html.DropDownList("MinimumWordCount", null, new { @class = "form-control" })
+              </div>
+          </div>
+
+
+          <br />
+          <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                  <input type="submit" value="Generate Phrase" class="btn btn-primary" />
+              </div>
+          </div>
+
+      </div>
+}
+
+
+
+
+        <div class="col-md-6">
+            <h2>
+                @if (Model != null)
+    {
+
+        Boolean IsNumber = true;
+        foreach (String Word in Model)
+        {
+            if (IsNumber)
+            {
+                <span>(@Word) - </span>
+    IsNumber = false;
+}
+else
+{
+            @Word;
+}
+
+}
+            <br />
+using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" name="Number" id="Number" value="@ViewBag.RegeneratedNumber" />
+            <input type="hidden" name="MinimumWordCount" id="MinimumWordCount" value="@ViewBag.MinimumWordCountNumber" />
+            <br />
+            <input type="submit" value="Regenerate New Phrase" class="btn btn-default col-md-offset-1" />
+
+}
+
+
+}
+else
+{
+            @ViewBag.Incomplete;
+            <br />
+}
+            </h2>
+        </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="col-md-3">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Associated Letters/Sounds </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Z, S</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>D, T</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>R</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>L</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>J, Sh, Ch, G</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>K, C</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>F, V</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>B, P</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>"Wildcard" <br />Letters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>e</td>
+                    </tr>
+                    <tr>
+                        <td>i</td>
+                    </tr>
+                    <tr>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>u</td>
+                    </tr>
+                    <tr>
+                        <td>h</td>
+                    </tr>
+                    <tr>
+                        <td>w</td>
+                    </tr>
+                    <tr>
+                        <td>y</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>  
+
+    <br /><br /><br />
+    <div class="row">
+
+
+        <div class="col-md-12">
+
+
+            @if (ViewBag.PastPhrases.Count > 0)
+            {
+                if (ViewBag.PastPhrases.Count > 0)
+                {
+                    <h2>
+                        Past Phrases    
+                    </h2>
+                    <br />
+                }
+                for (int iCount = (ViewBag.PastPhrases.Count - 1); iCount > -1; iCount--)
+                {
+                    Boolean IsNumber = true;
+                    <p>
+                        @foreach (String Word in ViewBag.PastPhrases[iCount])
+                        {
+                            if (IsNumber)
+                            {
+                                <span>(@Word) - </span>
+                                IsNumber = false;
+                            }
+                            else
+                            {
+                                @Word;
+                            }
+                        }
+                    </p>
+                    <hr>
+
+                }
+                <input type="button" value="Clear Past Phrases" onclick="location.href='@Url.Action("ClearPhases", "Home")'" class="btn btn-primary" />
+            }
+
+        </div>
+    </div>
+
+
