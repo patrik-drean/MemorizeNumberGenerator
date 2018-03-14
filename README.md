@@ -16,8 +16,8 @@ Kevin Horsley was more than generous in providing input during the project.
 ## Lessons Learned 
 <ul>  
   <li>I used the steamreader class and learned how to manipulate a text file as a list.</li>
-  <li>I learned I am more that capabble to take on complicated logic. It's just a matter of taking it a piece at a time. </li>
-  <li>It pays off to take risks. I sent a simple video of my app to Kevin Horsley and that was the first step to gaining a great mentor. You're better than you think you are, so don't be scared to take the next step.</li>
+  <li>I learned I am more that capable to take on complicated logic. It's just a matter of taking it a piece at a time. </li>
+  <li>It pays off to take risks. I sent a simple video of my app to Kevin Horsley and that was the first step to gaining a great mentor. You're better than you think you are, so don't be scared to take the next step.</li>
 </ul>
 
 
