@@ -1,0 +1,83 @@
+﻿#brand-logo {
+    width: 60px;
+    position: relative;
+    top: 3px;
+}
+
+.navbar-nav a {
+    color: white !important;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+.navbar-nav a:hover {
+    color: black !important;
+    background-color: white !important;
+}
+.navbar-nav a {
+    margin: 2px 0 1px 0;
+}
+.active2 {
+    background-color: #75797c;
+}
+.btn-primary
+{
+    background-color: #993350;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:disabled, .btn-primary.is-disabled 
+{
+    background-color: #690808;
+}
+
+#donation_div 
+{
+    max-width:700px;
+    margin: 0 auto;
+    text-align: center;
+}
+#donation_div h4
+{
+    //text-align: center;
+}
+
+#donation_div input[type="image"]
+{
+    width:130px;
+}
+/**********************about page***************************/
+.about_header {
+    background-color: #993350;
+    padding: 10px 15px;
+    width: 100%;
+    color: white;
+    font-family: 'Mukta Malar', sans-serif;
+    font-weight: 700;   
+    font-size: 1.8em;
+    text-align: center;
+}
+.about_para
+{
+    font-size: 1.3em;
+    padding: 0 50px;
+    text-align: justify;
+}
+.about_example_div
+{
+    font-weight: 600;
+}
+
+.about_example_div p
+{
+    font-size: 1.4em;
+}
+/*******************************Responsive ***************************/
+@media (max-width: 767px) {
+
+    #brand-logo {
+        display: none;
+    }
+    /*.about_header {
+        width: 100%;
+    }*/
+
+}

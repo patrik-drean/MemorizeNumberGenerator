@@ -1,11 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100806632-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-100806632-2');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlimited Memory</title>
+    <meta name="description" content="Generate a phrase to help memorize numbers better. Learn more about the mnemonic major system.">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Mukta+Malar" rel="stylesheet">
+    <title>Memory Duck</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/index.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -13,15 +27,19 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <!--<span class="icon-bar"></span>-->
                     <span class="icon-bar"></span>
                 </button>
             </div>
+
             <div class="navbar-collapse collapse">
+                <a href="/"><img id="brand-logo" class=" pull-left" src="~/Content/img/duck_logo.png" /></a>
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-      
+                    <li>@Html.ActionLink("Number Phrase Generation", "Index", "home")</li>
+                   <!-- <li>Html.ActionLink("One Word Generation", "OneWord", "Home")</li>-->
+                    <li>@Html.ActionLink("Learn More", "what_is_the_mnemonic_major_system", "home")</li>
                 </ul>
+
             </div>
         </div>
     </div>
@@ -36,5 +54,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/layout.js"></script>
 </body>
 </html>

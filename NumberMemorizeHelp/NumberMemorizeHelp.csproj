@@ -151,8 +151,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\about.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\duck_logo.png" />
+    <Content Include="Content\index.css" />
     <Content Include="Content\nounlist.txt" />
     <Content Include="Content\WordList.txt" />
     <Content Include="favicon.ico" />
@@ -172,6 +175,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\layout.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -186,9 +190,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\home\Contact.cshtml" />
+    <Content Include="Views\home\Index.cshtml" />
+    <Content Include="Views\home\OneWord.cshtml" />
+    <Content Include="Views\home\what-is-the-mnemonic-major-system.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
