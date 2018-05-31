@@ -8,7 +8,7 @@ A generator that converts numbers into a phrase that helps memorize the number. 
 ## Project Details
 See NumberMemorizeHelp -> Controllers -> HomeController.cs for details on the logic of the generator.
 
-For direct details on how the Mnemonic Major System works, see http://memoryduck.com/home/what_is_the_mnemonic_major_system.
+For details on how the Mnemonic Major System works, see http://memoryduck.com/home/what_is_the_mnemonic_major_system.
 
 Kevin Horsley was more than generous in providing input during the project. 
 
